@@ -45,10 +45,10 @@ cat <<EOF | sudo tee /home/kiosk/kiosk-html/index.html >/dev/null
       document.body.innerHTML = "<iframe id='siteFrame' src='" + websiteB + "' width='100%' height='100%' frameborder='0'></iframe>";
       const iframe = document.getElementById("siteFrame");
 
-      // Refresh website B every 3 seconds
+      // Refresh website B every 1.7seconds
       setInterval(() => {
         iframe.src = websiteB;
-      }, 3000);
+      }, 1700);
     }
 
     // Load website A for 5 seconds, then go to website B
