@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set your main user
-MAIN_USER="arshad"
+MAIN_USER="test"
 
 # Check if running as root
 if [ "$(id -u)" -ne 0 ]; then
