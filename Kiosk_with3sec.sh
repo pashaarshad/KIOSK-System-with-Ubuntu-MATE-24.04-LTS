@@ -39,7 +39,7 @@ cat <<EOF | sudo tee /home/kiosk/kiosk-html/index.html >/dev/null
   <title>Kiosk Redirect + Refresh</title>
   <script>
     const websiteA = "https://sdclibary.netlify.app";
-    const websiteB = "https://mycampuz.co.in/visitor/#/visitor";
+    const websiteB = "https://mycampuz.co.in/visitor/";
 
     function redirectToB() {
       document.body.innerHTML = "<iframe id='siteFrame' src='" + websiteB + "' width='100%' height='100%' frameborder='0'></iframe>";
@@ -51,10 +51,10 @@ cat <<EOF | sudo tee /home/kiosk/kiosk-html/index.html >/dev/null
       }, 1700);
     }
 
-    // Load website A for 5 seconds, then go to website B
+    // Load website A for 10 seconds, then go to website B
     window.onload = () => {
       document.body.innerHTML = "<iframe src='" + websiteA + "' width='100%' height='100%' frameborder='0'></iframe>";
-      setTimeout(redirectToB, 5000);
+      setTimeout(redirectToB, 10000);
     };
   </script>
   <style>
